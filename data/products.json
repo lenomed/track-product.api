@@ -1,0 +1,41 @@
+[
+  {
+    "id": "prod123",
+    "trackingId": "SWD12345678",
+    "name": "Electronics Package",
+    "description": "Fragile electronics equipment",
+    "senderName": "TechCorp Inc.",
+    "receiverName": "John Smith",
+    "origin": "San Francisco, CA",
+    "destination": "New York, NY",
+    "departureDate": "2024-03-01",
+    "arrivalDate": "2024-03-05",
+    "status": "In Transit"
+  },
+  {
+    "id": "prod123645",
+    "trackingId": "SWD1234567sds8",
+    "name": "Electronics Package",
+    "description": "Fragile electronics equipment",
+    "senderName": "TechCorp Inc.",
+    "receiverName": "John Smith",
+    "origin": "San Francisco, CA",
+    "destination": "New York, NY",
+    "departureDate": "2024-03-01",
+    "arrivalDate": "2024-03-05",
+    "status": "In Transit"
+  },
+  {
+    "id": "prod1dfadf23645",
+    "trackingId": "SWD1234dafd567sds8",
+    "name": "Electronics Package",
+    "description": "Fragile electronics equipment",
+    "senderName": "TechCorp Inc.",
+    "receiverName": "John Smith",
+    "origin": "San Francisco, CA",
+    "destination": "New York, NY",
+    "departureDate": "2024-03-01",
+    "arrivalDate": "2024-03-05",
+    "status": "In Transit"
+  }
+]
