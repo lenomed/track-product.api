@@ -5,7 +5,7 @@ import { ServiceResponse, ProductDto } from 'src/models/dto';
 
 @Injectable({ scope: Scope.REQUEST })
 export class TrackService {
-  private productsFilePath = resolve(__dirname, '../../data/products.json');
+  private productsFilePath = resolve(__dirname, '../data/products.json');
 
   async findProduct(
     trackingCode: string,

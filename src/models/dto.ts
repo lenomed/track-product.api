@@ -20,3 +20,11 @@ export interface ServiceResponse<T = null> {
   status: HttpStatus;
   data?: T | null;
 }
+
+export interface ContactRequest {
+  id: string;
+  message: string;
+  email: string;
+  name: string;
+  subject: string;
+}

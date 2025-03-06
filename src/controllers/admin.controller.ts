@@ -8,6 +8,7 @@ import {
   HttpStatus,
   Delete,
   Param,
+  Put,
 } from '@nestjs/common';
 import { ApiTags, ApiQuery, ApiResponse } from '@nestjs/swagger';
 import { AdminService } from '../services/admin.service';
@@ -24,6 +25,18 @@ export class AdminController {
   @ApiResponse({ status: 500, description: 'Server error' })
   async addProduct(@Body() product: ProductDto, @Res() res: Response) {
     const response = await this.adminService.addProduct(product);
+    res.status(response.status).json(response);
+  }
+
+  @Put('products/:productId')
+  @ApiResponse({ status: 201, description: 'Product added successfully' })
+  @ApiResponse({ status: 500, description: 'Server error' })
+  async updateProduct(
+    @Body() product: ProductDto,
+    @Param('productId') productId: string,
+    @Res() res: Response,
+  ) {
+    const response = await this.adminService.updateProduct(productId, product);
     res.status(response.status).json(response);
   }
 
@@ -71,5 +84,34 @@ export class AdminController {
         message: 'No products found',
       });
     }
+  }
+
+  @Get('contacts')
+  @ApiResponse({ status: 200, description: 'Contacts retrieved successfully' })
+  @ApiResponse({ status: 404, description: 'No contact found' })
+  async getAllContacts(@Res() res: Response) {
+    const contacts = await this.adminService.getAllContacts();
+    if (contacts.length > 0) {
+      res
+        .status(HttpStatus.OK)
+        .json({ status: HttpStatus.OK, success: true, data: contacts });
+    } else {
+      res.status(HttpStatus.NOT_FOUND).json({
+        status: HttpStatus.NOT_FOUND,
+        success: false,
+        message: 'No contact found',
+      });
+    }
+  }
+
+  @Delete('contacts/:id')
+  @ApiResponse({ status: 200, description: 'Thank you for contacting us' })
+  @ApiResponse({
+    status: 400,
+    description: "We couldn't process your request please try again.",
+  })
+  async deleteContact(@Param('id') id: string, @Res() res: Response) {
+    const response = await this.adminService.deleteContact(id);
+    return res.status(response.status).json(response);
   }
 }
