@@ -1,18 +1,5 @@
 [
   {
-    "id": "1",
-    "name": "Electronics Package",
-    "description": "Laptop and accessories",
-    "senderName": "Tech Solutions Inc.",
-    "receiverName": "John Smith",
-    "origin": "San Francisco, CA",
-    "destination": "New York, NY",
-    "departureDate": "2023-06-15",
-    "arrivalDate": "2023-06-18",
-    "status": "Delivered",
-    "trackingId": "TRK12345"
-  },
-  {
     "id": "2",
     "name": "Office Supplies",
     "description": "Paper, pens, and staplers",
@@ -50,5 +37,18 @@
     "arrivalDate": "2024-03-05",
     "status": "Delivered",
     "trackingId": "TRK19055"
+  },
+  {
+    "id": "1",
+    "name": "Electronics Package",
+    "description": "Laptop and accessories",
+    "senderName": "Tech Solutions Inc.",
+    "receiverName": "John Smith",
+    "origin": "San Francisco, CA",
+    "destination": "New York, NY",
+    "departureDate": "2023-06-15",
+    "arrivalDate": "2023-06-18",
+    "status": "In Transit",
+    "trackingId": "TRK12345"
   }
 ]
